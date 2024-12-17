@@ -6,6 +6,9 @@ export default {
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
+      transitionProperty: {
+        'transform-background-color': 'transform, background-color',
+      },
     },
   },
   plugins: [],
