@@ -1,45 +1,70 @@
-import { useRef, useEffect } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 const Navbar = ({ navOpen }) => {
-  const lastActiveLink = useRef()
-  const activeBox = useRef()
-  const initActiveBox = () => {
-    console.log(lastActiveLink.current)
-    console.log(activeBox.current)
+  const [activeLink, setActiveLink] = useState(null)
+  const [boxPosition, setBoxPosition] = useState({ top: 0, height: 0 })
+  const linkRefs = useRef([])
 
-    activeBox.current.style.top = lastActiveLink.current.offsetTop + 'px'
-
-    activeBox.current.style.left = lastActiveLink.current.offsetLeft + 'px'
-
-    activeBox.current.style.width = lastActiveLink.current.offsetWidth + 'px'
-
-    activeBox.current.style.height = lastActiveLink.current.offsetHeight + 'px'
+  const handleLinkClick = (index) => {
+    setActiveLink(index)
   }
 
-  useEffect(initActiveBox, [])
-
-  const navItems = [
-    {
-      label: 'Home',
-      link: '#home',
-      className: 'nav-link active',
-      ref: lastActiveLink,
-    },
-    { label: 'About', link: '#about', className: 'nav-link' },
-    { label: 'Projects', link: '#projects', className: 'nav-link' },
-    { label: 'Resume', link: '#Resume', className: 'nav-link' },
-    { label: 'Contact', link: '#contact', className: 'nav-link md:hidden' },
-  ]
+  useEffect(() => {
+    if (activeLink !== null) {
+      const activeLinkElement = linkRefs.current[activeLink]
+      setBoxPosition({
+        top: activeLinkElement.offsetTop,
+        height: activeLinkElement.offsetHeight,
+      })
+    }
+  }, [activeLink])
 
   return (
-    <nav className={`navbar ${navOpen ? 'active' : ''}`}>
-      {navItems.map(({ label, link, className, ref }, key) => (
-        <a href={link} key={key} ref={ref} className={className}>
-          {label}
-        </a>
-      ))}
-      <div className="active-box" ref={activeBox}></div>
+    <nav
+      className={`navbar ${navOpen ? 'active' : ''}`}
+      role="navigation"
+      aria-label="Main Navigation"
+    >
+      <ul className="flex flex-col md:flex-row">
+        <li
+          className={`nav-link ${activeLink === 0 ? 'active' : ''}`}
+          onClick={() => handleLinkClick(0)}
+          ref={(el) => (linkRefs.current[0] = el)}
+        >
+          <a href="#home">Home</a>
+        </li>
+        <li
+          className={`nav-link ${activeLink === 1 ? 'active' : ''}`}
+          onClick={() => handleLinkClick(1)}
+          ref={(el) => (linkRefs.current[1] = el)}
+        >
+          <a href="#about">About</a>
+        </li>
+        <li
+          className={`nav-link ${activeLink === 2 ? 'active' : ''}`}
+          onClick={() => handleLinkClick(2)}
+          ref={(el) => (linkRefs.current[2] = el)}
+        >
+          <a href="#services">Services</a>
+        </li>
+        <li
+          className={`nav-link ${activeLink === 3 ? 'active' : ''}`}
+          onClick={() => handleLinkClick(3)}
+          ref={(el) => (linkRefs.current[3] = el)}
+        >
+          <a href="#contact">Contact</a>
+        </li>
+      </ul>
+
+      {/* Active box */}
+      <div
+        className={`navbar activeBox ${activeLink !== null ? 'active' : ''}`}
+        style={{
+          top: `${boxPosition.top}px`,
+          height: `${boxPosition.height}px`,
+        }}
+      />
     </nav>
   )
 }
