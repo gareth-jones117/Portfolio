@@ -57,7 +57,7 @@ const Navbar = ({ navOpen }) => {
         </li>
       </ul>
 
-      {/* Active box */}
+      {/*Active-box*/}
       <div
         className={`navbar activeBox ${activeLink !== null ? 'active' : ''}`}
         style={{
