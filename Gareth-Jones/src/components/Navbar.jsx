@@ -2,8 +2,9 @@ import { useRef, useEffect } from 'react'
 import PropTypes from 'prop-types'
 
 const Navbar = ({ navOpen }) => {
-  const lastActiveLink = useRef()
-  const activeBox = useRef()
+  const lastActiveLink = useRef(null)
+  const activeBox = useRef(null)
+
   const initActiveBox = () => {
     if (!lastActiveLink.current || !activeBox.current) return // Guard clause
 
@@ -13,8 +14,22 @@ const Navbar = ({ navOpen }) => {
     activeBox.current.style.height = `${lastActiveLink.current.offsetHeight}px`
   }
 
-  useEffect(initActiveBox, [])
-  window.addEventListener('resize', initActiveBox)
+  useEffect(() => {
+    initActiveBox()
+
+    const handleResize = () => {
+      initActiveBox()
+    }
+
+    // Add resize event listener
+    window.addEventListener('resize', handleResize)
+
+    // Cleanup event listener on unmount
+    return () => {
+      window.removeEventListener('resize', handleResize)
+    }
+  }, [])
+
   const activeCurrentLink = (event) => {
     if (!event.target || !activeBox.current) return // Guard clause
 
@@ -33,7 +48,6 @@ const Navbar = ({ navOpen }) => {
       label: 'Home',
       link: '#home',
       className: 'nav-link active',
-      ref: lastActiveLink,
     },
     { label: 'About', link: '#about', className: 'nav-link' },
     { label: 'Projects', link: '#projects', className: 'nav-link' },
@@ -43,11 +57,11 @@ const Navbar = ({ navOpen }) => {
 
   return (
     <nav className={`navbar ${navOpen ? 'active' : ''}`}>
-      {navItems.map(({ label, link, className, ref }, key) => (
+      {navItems.map(({ label, link, className }, key) => (
         <a
           href={link}
           key={key}
-          ref={ref}
+          ref={key === 0 ? lastActiveLink : null} // Only set the ref on the first item for now
           className={className}
           onClick={activeCurrentLink}
         >
