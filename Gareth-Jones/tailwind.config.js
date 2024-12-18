@@ -3,11 +3,8 @@ export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
   theme: {
     extend: {
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-      },
       transitionProperty: {
-        'transform-background-color': 'transform, background-color',
+        'opacity-transform-filter': 'opacity, transform, filter',
       },
     },
   },

@@ -2,6 +2,18 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  .transition-filter {
+    transition-property: filter;
+  }
+  .transition-transform-background-color {
+    @apply transition-colors;
+  }
+  .ring-style {
+    @apply ring-inset ring-1 ring-zinc-50/[0.2];
+  }
+}
+
 /* Base */
 
 html {
@@ -16,29 +28,47 @@ body {
 
 .menu-btn {
   @apply w-10 grid place-items-center bg-zinc-50/10 rounded-xl 
-  ring-inset ring-1 ring-zinc-50/[0.2] backdrop-blur-2xl 
-   hover:bg-zinc-50/15 transition-transform-background-color active:scale-95;
+  ring-style backdrop-blur-2xl hover:bg-zinc-50/15 
+  transition-transform-background-color active:scale-95;
 }
+
 /* nav */
 
 .navbar {
-  @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-zinc-50/10 rounded-2xl
-   ring-inset ring-1 ring-zinc-50/[0,2] backdrop-blur-2xl  hover:bg-zinc-50/15 
-   transition-transform-background-color active:scale-90 isolate blur-sm opacity-0
-   invisible;
+  @apply absolute top-full mt-2 right-0 min-w-40 p-4 bg-zinc-50/10 rounded-2xl
+    ring-inset ring-1 ring-zinc-50/[0.2] blur-sm hover:bg-zinc-50/15 
+    transition-opacity-transform-filter active:scale-90 isolate opacity-0 invisible 
+    md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 
+    backdrop-blur-2xl;
+
+    @apply md:flex-row lg:p-6 lg:max-w-screen-lg;
 }
 .navbar.active {
   @apply opacity-100 scale-100 blur-0 visible;
 }
 
 .nav-link {
-  @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide rounded-2xl
-         text-zinc-50/50 hover:text-zinc-900 hover:bg-zinc-50 transition-colors;
+  @apply grid items-center h-12 px-6 text-base font-medium tracking-wide 
+  text-black hover:bg-zinc-50 hover:text-zinc-900 transition-colors rounded-xl;
+
+
 }
 .nav-link.active {
-  @apply text-zinc-900 duration-500;
+  @apply text-zinc-50 duration-500;
 }
+.nav-link:focus {
+  @apply outline-none ring-2 ring-zinc-50;
 
-.navbar.activeBox {
-  @apply absolute top-2 left-2 right-2 h-9 bg-zinc-50 rounded-lg -z-10 transition-[top,left] duration-500;
+ 
+}
+/* Must be done without apply, otherwise breaks...no idea why */
+.active-box {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  pointer-events: none; 
+  background-color: transparent; 
 }
