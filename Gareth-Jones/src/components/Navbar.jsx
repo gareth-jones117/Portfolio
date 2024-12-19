@@ -6,7 +6,7 @@ const Navbar = ({ navOpen }) => {
   const activeBox = useRef(null)
 
   const initActiveBox = () => {
-    if (!lastActiveLink.current || !activeBox.current) return // Guard clause
+    if (!lastActiveLink.current || !activeBox.current) return
 
     activeBox.current.style.top = `${lastActiveLink.current.offsetTop}px`
     activeBox.current.style.left = `${lastActiveLink.current.offsetLeft}px`
@@ -21,17 +21,15 @@ const Navbar = ({ navOpen }) => {
       initActiveBox()
     }
 
-    // Add resize event listener
     window.addEventListener('resize', handleResize)
 
-    // Cleanup event listener on unmount
     return () => {
       window.removeEventListener('resize', handleResize)
     }
   }, [])
 
   const activeCurrentLink = (event) => {
-    if (!event.target || !activeBox.current) return // Guard clause
+    if (!event.target || !activeBox.current) return
 
     lastActiveLink.current?.classList.remove('active')
     event.target.classList.add('active')
@@ -61,7 +59,7 @@ const Navbar = ({ navOpen }) => {
         <a
           href={link}
           key={key}
-          ref={key === 0 ? lastActiveLink : null} // Only set the ref on the first item for now
+          ref={key === 0 ? lastActiveLink : null}
           className={className}
           onClick={activeCurrentLink}
         >
