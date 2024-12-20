@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0..1,0');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .transition-filter {
+    transition-property: filter;
+  }
+  .transition-transform-background-color {
+    @apply transition-colors;
+  }
+  .ring-style {
+    @apply ring-inset ring-1 ring-zinc-50/[0.2];
+  }
+}
+
+/* Base */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-zinc-900 text-zinc-50;
+}
+
+/* utilities */
+.material-symbols-rounded {
+  @apply w-[1em] h-[1em] overflow-hidden;
+}
+
+.container {
+  @apply px-4 mx-auto lg:px-8 xl:max-w-6xl;
+}
+
+.img-box {
+  @apply bg-zinc-700 overflow-hidden;
+}
+
+.img-cover {
+  @apply w-full h-full object-cover;
+}
+
+.element {
+  font-family: 'Material Symbols Rounded', sans-serif;
+  font-variation-settings: 'opsz' 24, 'wght' 400, 'FILL' 0, 'GRAD' 0;
+}
+
+.section{
+  @apply pt-20 lg:pt-32
+}
+/* Components */
+
+.menu-btn {
+  @apply w-10 grid place-items-center bg-zinc-50/10 rounded-xl 
+  ring-style backdrop-blur-2xl hover:bg-zinc-50/15 
+  transition-transform-background-color active:scale-95;
+}
+
+/* nav */
+
+.navbar {
+  @apply absolute top-full mt-2 right-0 min-w-40 p-4 bg-zinc-50/10 rounded-2xl
+    ring-inset ring-1 ring-zinc-50/[0.2] blur-sm hover:bg-zinc-50/15 
+    transition-opacity-transform-filter active:scale-90 isolate opacity-0 invisible 
+    md:static md:flex md:items-center md:mt-0 md:opacity-100 md:blur-0 md:visible md:scale-100 
+    backdrop-blur-2xl;
+
+  @apply md:flex-row lg:p-6 lg:max-w-screen-lg;
+}
+.navbar.active {
+  @apply opacity-100 scale-100 blur-0 visible;
+}
+
+.nav-link {
+  @apply grid items-center h-12 px-6 text-base font-medium tracking-wide 
+  text-zinc-50/50 hover:bg-zinc-50 hover:text-zinc-900 transition-colors rounded-xl;
+}
+.nav-link.active {
+  @apply text-zinc-50 duration-500;
+}
+
+.nav-link:focus {
+  @apply outline-none ring-2 ring-zinc-50;
+}
+/* Must be done without apply, otherwise breaks...no idea why */
+.active-box {
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 0;
+  left: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  background-color: transparent;
+}
+/* Button */
+.btn {
+  @apply max-w-max h-9 flex items-center 
+  gap-2 px-4 rounded-xl font-medium text-sm 
+  ring-1 ring-zinc-50/5 ring-inset transition-[background-color];
+}
+
+.btn {
+  @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/50;
+}
+
+.btn-secondary {
+  @apply bg-zinc-50 text-zinc-900 active:bg-zinc-50/80;
+}
+
+.btn .material-symbols-rounded {
+  @apply text-[18px];
+}
+
+.btn:has(.material-symbols-rounded) {
+  @apply pr-3;
+}
+
+.btn-primary {
+  @apply h-11 bg-sky-400 text-zinc-950 hover:bg-sky-300 active:bg-sky-400;
+}
+.btn-outline {
+  @apply h-11 bg-zinc-600  hover:bg-zinc-700 text-zinc-50/70 active:bg-zinc-800;
+}
+/* Typograhy */
+
+.headline-1 {
+  @apply text-5xl leading-tight font-semibold lg:text-[55px] lg:leading-[1.15];
+}
+
+.headline-1 {
+  @apply max-w-max;
+  background: -webkit-linear-gradient(0deg, #fafafa, #a1a1a1);
+  background: linear-gradient(0deg, #fafafa, #a1a1a1);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.headline-2{
+  @apply text-3xl lg:text-4xl lg:leading-tight font-semibold
+}
