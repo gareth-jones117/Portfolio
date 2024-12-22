@@ -2,52 +2,52 @@ import SkillCard from './Skillcard'
 
 const skillItem = [
   {
-    imgSrc: 'src/assets/images/figma.svg',
+    imgSrc: 'images/figma.svg',
     label: 'Figma',
     desc: 'Design tool',
   },
   {
-    imgSrc: 'src/assets/images/css3.svg',
+    imgSrc: 'images/css3.svg',
     label: 'CSS',
     desc: 'User Interface',
   },
   {
-    imgSrc: 'src/assets/images/javascript.svg',
+    imgSrc: 'images/javascript.svg',
     label: 'JavaScript',
     desc: 'Dynamic and interactive web development',
   },
   {
-    imgSrc: 'src/assets/images/nodejs.svg',
+    imgSrc: 'images/nodejs.svg',
     label: 'NodeJS',
     desc: 'Web Server',
   },
   {
-    imgSrc: 'src/assets/images/expressjs.svg',
+    imgSrc: 'images/expressjs.svg',
     label: 'ExpressJS',
     desc: 'Lightweight web framework for Node.js',
   },
   {
-    imgSrc: 'src/assets/images/react.svg',
+    imgSrc: 'images/react.svg',
     label: 'React',
     desc: 'Framework',
   },
   {
-    imgSrc: 'src/assets/images/tailwindcss.svg',
+    imgSrc: 'images/tailwindcss.svg',
     label: 'TailwindCSS',
     desc: 'User Interface',
   },
   {
-    imgSrc: 'src/assets/images/typescript.svg',
+    imgSrc: 'images/typescript.svg',
     label: 'Typescript',
     desc: 'Typed javascript for scalable applications',
   },
   {
-    imgSrc: 'src/assets/images/docker.svg',
+    imgSrc: 'images/docker.svg',
     label: 'Docker',
     desc: 'Platform',
   },
   {
-    imgSrc: 'src/assets/images/postman.svg',
+    imgSrc: 'images/postman.svg',
     label: 'Postman',
     desc: 'API client',
   },

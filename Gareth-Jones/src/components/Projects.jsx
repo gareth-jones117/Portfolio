@@ -2,7 +2,7 @@ import ProjectCard from './ProjectCard'
 
 const project = [
   {
-    imgSrc: 'src/assets/images/Stellar-share.png',
+    imgSrc: 'images/Stellar-share.png',
     title: 'Stellar-Share',
     tags: ['Fullstack', 'Web Development', 'API'],
     projectLink: 'https://stellar-share-mania-roa-24.pushed.nz/',
@@ -10,7 +10,7 @@ const project = [
       'One of the largest projects I have ever done. I used Express.js for the backend , dbdiagram to create the database and react typescript to create the Front End. In the future I would like to return to this to fix some of the accessibilty issues and some more styling ',
   },
   {
-    imgSrc: 'src/assets/images/Snake.png',
+    imgSrc: 'images/Snake.png',
     title: 'Snake',
     tags: ['Game', 'HTML', 'Javascript'],
     projectLink: 'https://gareth-jones117.github.io/Snake/',

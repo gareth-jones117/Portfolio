@@ -7,6 +7,7 @@ import Review from './components/Review'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
+// modules
 import PropTypes from 'prop-types'
 import React from 'react'
 import { ReactLenis } from 'lenis/react'

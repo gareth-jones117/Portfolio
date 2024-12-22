@@ -81,7 +81,7 @@ const Footer = () => {
         <div className="flex items-center justify-between pt-10 mt-10 border-t border-zinc-700">
           <a href="/" className="logo reveal-up">
             <img
-              src="/src/assets/images/gj-logo1.svg"
+              src="images/gj-logo1.svg"
               alt="gj-logo-footer"
               width={40}
               height={40}

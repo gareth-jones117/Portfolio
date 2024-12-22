@@ -9,7 +9,7 @@ const Hero = () => {
             <figure className="img-box w-9 h-9 rounded-lg">
               {/* delete when a better pic comes along */}
               <img
-                src="src/assets/images/wow.png"
+                src="images/wow.png"
                 alt="gj-small"
                 width={40}
                 height={40}
@@ -30,7 +30,7 @@ const Hero = () => {
             <ButtonPrimary
               label="Download CV"
               icon="download"
-              href="src/assets/Resume-cv.pdf"
+              href="assets/Resume-cv.pdf"
               aria-label="Download CV as PDF"
               target="_blank" // This opens the PDF in a new tab
             />
@@ -44,7 +44,7 @@ const Hero = () => {
         <div className="hidden lg:block">
           <figure className="w-full max-w-[480px] ml-auto bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[60px] overflow-hidden">
             <img
-              src="/src/assets/images/wow.png"
+              src="images/wow.png"
               width={656}
               height={800}
               alt="dfd"
