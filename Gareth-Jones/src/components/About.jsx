@@ -1,6 +1,6 @@
 const About = () => {
   return (
-    <section className="section" id="section">
+    <section className="section" id="about">
       <div className="container">
         <div className="bg-zinc-800/50 p-7 rounded-2xl md:p12 reveal-up">
           <p className="text-zinc-300 mb-4 md:mb-8 md:text-2xl">
@@ -19,7 +19,11 @@ const About = () => {
             meaning of teamwork.
             <br />
             I&apos;m excited to continue growing and learning as I build a
-            fulfilling career in tech!
+            fulfilling career in tech! When I&apos;m not coding, you can usually
+            find me indulging in some nerdy hobbies like watching anime, playing
+            video games, or enjoying a good game of Magic: The Gathering.
+            Recently, I&apos;ve also picked up gardening as a new hobby. I also
+            love walking and exploring the outdoors.
           </p>
         </div>
       </div>

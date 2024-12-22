@@ -30,7 +30,7 @@ const reviews = [
   },
   {
     content:
-      'Heya Gareth, You&apos;ve been a ray of sunshine for the cohort. I really appreciate your humour and contributions in cohort discussions. It was great to have you on the team for our final project.Good effort man A real Good Cooper Nanotube! ',
+      'Heya Gareth, You havSe been a ray of sunshine for the cohort. I really appreciate your humour and contributions in cohort discussions. It was great to have you on the team for our final project.Good effort man A real Good Cooper Nanotube! ',
     name: 'Zak',
     imgSrc: 'src/assets/images/maleAvatar2.jpg',
     company: 'Dev-Academy',
@@ -79,7 +79,7 @@ const Review = () => {
   })
 
   return (
-    <section className="section overflow-hidden" id="reviews">
+    <section className="section overflow-hidden" id="review">
       <div className="container">
         <h2 className="headline-2 mb-8 reveal-up">
           What People have said about me

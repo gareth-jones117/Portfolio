@@ -10,7 +10,7 @@ const Hero = () => {
               {/* delete when a better pic comes along */}
               <img
                 src="src/assets/images/wow.png"
-                alt="gj"
+                alt="gj-small"
                 width={40}
                 height={40}
                 className="img-cover"
@@ -31,6 +31,8 @@ const Hero = () => {
               label="Download CV"
               icon="download"
               href="src/assets/Resume-cv.pdf"
+              aria-label="Download CV as PDF"
+              target="_blank" // This opens the PDF in a new tab
             />
             <ButtonOutline
               href="#about"

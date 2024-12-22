@@ -1,10 +1,14 @@
 import PropTypes from 'prop-types'
 
-const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
+const ProjectCard = ({ imgSrc, title, tags, projectLink, classes = '' }) => {
   return (
-    <div
+    <a
+      href={projectLink}
+      target="_blank"
+      rel="noopener noreferrer"
       className={
         'relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-50/5 transition-colors' +
+        ' ' +
         classes
       }
     >
@@ -33,8 +37,7 @@ const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
           </span>
         </div>
       </div>
-      <a href={projectLink} className="absolute inset-0" target="_blank"></a>
-    </div>
+    </a>
   )
 }
 
@@ -42,7 +45,7 @@ ProjectCard.propTypes = {
   imgSrc: PropTypes.string.isRequired,
   title: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
-  projectLink: PropTypes.string,
+  projectLink: PropTypes.string.isRequired,
   classes: PropTypes.string,
 }
 

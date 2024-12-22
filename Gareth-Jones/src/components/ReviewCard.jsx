@@ -6,7 +6,6 @@ ratings.fill({
   style: { fontVariationSettings: '"FILL" 1' },
 })
 
-
 const ReviewCard = ({ content, name, imgSrc, company }) => {
   return (
     <div className="bg-zinc-800 p-5 rounded-xl min-w-[320px] flex flex-col lg:min-w-[420px]">
@@ -21,7 +20,7 @@ const ReviewCard = ({ content, name, imgSrc, company }) => {
           </span>
         ))}
       </div>
-      <p className="text-zinc-400 mb-8">{content}</p>
+      <p className="text-zinc-300 mb-8">{content}</p>
       <div className="flex items-center gap-2 mt-auto">
         <figure className="img-box rounded-lg">
           <img

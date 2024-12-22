@@ -48,6 +48,7 @@ const Footer = () => {
                   <a
                     href={href}
                     className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200"
+                    aria-label="Links to site"
                   >
                     {label}
                   </a>
@@ -66,6 +67,7 @@ const Footer = () => {
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block text-sm text-zinc-400 py-1 transition-colors hover:text-zinc-200 reveal-up"
+                    aria-label="links to social media"
                   >
                     {label}
                   </a>

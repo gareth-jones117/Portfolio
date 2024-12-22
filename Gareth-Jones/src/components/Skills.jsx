@@ -60,7 +60,7 @@ const Skills = () => {
         <h2 className="headline-2 reveal-up">
           Languages, Frameworks, and Tools
         </h2>
-        <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
+        <p className="text-zinc-300 mt-3 mb-8 max-w-[50ch] reveal-up">
           These are some of the tools I&apos;ve used to bring my projects to
           life. I&apos;m excited to keep learning and expanding this list in the
           future!
