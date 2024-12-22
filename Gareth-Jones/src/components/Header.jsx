@@ -8,7 +8,12 @@ const Header = () => {
       <div className="max-w-screen-2xl w-full mx-auto px-4 flex justify-between items-center md:px-6 md:grids md:grid-cols-[1fr, 3f, 1fr]">
         <h1>
           <a href="/" className="logo">
-            <img src="src/assets/gj-logo.png" width={60} height={60} alt="GJ" />
+            <img
+              src="src/assets/images/gj-logo.png"
+              width={60}
+              height={60}
+              alt="GJ"
+            />
           </a>
         </h1>
         <div className="relative md:justify-self-center">

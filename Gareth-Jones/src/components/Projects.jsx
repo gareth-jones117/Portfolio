@@ -2,13 +2,13 @@ import ProjectCard from './ProjectCard'
 
 const project = [
   {
-    imgSrc: 'src/assets/Stellar-share.png',
+    imgSrc: 'src/assets/images/Stellar-share.png',
     title: 'Stellar-Share',
     tags: ['Fullstack' + ' ', 'Web Development' + ' ', 'API'],
     projectLink: 'https://stellar-share-mania-roa-24.pushed.nz/',
   },
   {
-    imgSrc: 'src/assets/Snake.png',
+    imgSrc: 'src/assets/images/Snake.png',
     title: 'Snake',
     tags: ['Game' + ' ', 'HTML' + ' ', 'Javascript'],
     projectLink: 'https://gareth-jones117.github.io/Snake/',
@@ -28,7 +28,7 @@ const Projects = () => {
               title={title}
               tags={tags}
               projectLink={projectLink}
-              classes='reveal-up'
+              classes="reveal-up"
             />
           ))}
         </div>

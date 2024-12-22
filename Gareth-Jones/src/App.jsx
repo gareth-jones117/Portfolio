@@ -7,12 +7,9 @@ import Review from './components/Review'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
-
-
 import PropTypes from 'prop-types'
 import React from 'react'
 import { ReactLenis } from 'lenis/react'
-import 'lenis/dist/lenis.css'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { useGSAP } from '@gsap/react'
@@ -53,9 +50,8 @@ const App = () => {
         scrollTrigger: {
           trigger: element,
           start: '-200 bottom',
-          end:'bottom 80%',
+          end: 'bottom 80%',
           scrub: true,
-        
         },
         y: 0,
         opacity: 1,
