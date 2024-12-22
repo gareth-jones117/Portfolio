@@ -27,12 +27,12 @@ const Hero = () => {
             Up and coming Full Stack Developer
           </h2>
           <div className="flex items-center gap-3">
-            <ButtonPrimary
+          <ButtonPrimary
               label="Download CV"
               icon="download"
-              href="assets/Resume-cv.pdf"
+              href="https://1drv.ms/b/s!Aiqo6K4gxyBV-g_gZobP2Sv0VnLJ?e=m83UEC" 
               aria-label="Download CV as PDF"
-              target="_blank" // This opens the PDF in a new tab
+              target="_blank"
             />
             <ButtonOutline
               href="#about"
