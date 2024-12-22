@@ -19,11 +19,12 @@ const About = () => {
             meaning of teamwork.
             <br />
             I&apos;m excited to continue growing and learning as I build a
-            fulfilling career in tech! When I&apos;m not coding, you can usually
-            find me indulging in some nerdy hobbies like watching anime, playing
-            video games, or enjoying a good game of Magic: The Gathering.
-            Recently, I&apos;ve also picked up gardening as a new hobby. I also
-            love walking and exploring the outdoors.
+            fulfilling career in tech! <br />
+            When I&apos;m not coding, you can usually find me indulging in some
+            nerdy hobbies like watching anime, playing video games, or enjoying
+            a good game of Magic: The Gathering. Recently, I&apos;ve also picked
+            up gardening as a new hobby. I also love walking and exploring the
+            outdoors.
           </p>
         </div>
       </div>

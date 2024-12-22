@@ -1,6 +1,13 @@
 import PropTypes from 'prop-types'
 
-const ProjectCard = ({ imgSrc, title, tags, projectLink, classes = '' }) => {
+const ProjectCard = ({
+  imgSrc,
+  title,
+  tags,
+  projectLink,
+  description,
+  classes = '',
+}) => {
   return (
     <a
       href={projectLink}
@@ -29,6 +36,7 @@ const ProjectCard = ({ imgSrc, title, tags, projectLink, classes = '' }) => {
               </span>
             ))}
           </div>
+          <p className="mt-3 text-sm text-zinc-300">{description}</p>
         </div>
 
         <div className="w-11 h-11 rounded-lg grid place-items-center bg-sky-400 text-zinc-950 shrink-0">
@@ -46,6 +54,7 @@ ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   tags: PropTypes.array.isRequired,
   projectLink: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
   classes: PropTypes.string,
 }
 
