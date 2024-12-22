@@ -6,7 +6,6 @@ ratings.fill({
   style: { fontVariationSettings: '"FILL" 1' },
 })
 
-console.log(ratings)
 
 const ReviewCard = ({ content, name, imgSrc, company }) => {
   return (

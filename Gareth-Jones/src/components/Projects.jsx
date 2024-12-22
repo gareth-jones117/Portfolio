@@ -19,7 +19,7 @@ const Projects = () => {
   return (
     <section className="section" id="projects">
       <div className="container">
-        <h2 className="headline-2 mb-8">Some Of My Projects</h2>
+        <h2 className="headline-2 mb-8 reveal-up">Some Of My Projects</h2>
         <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minimax(280px,_1fr))]">
           {project.map(({ imgSrc, title, tags, projectLink }, key) => (
             <ProjectCard
@@ -28,6 +28,7 @@ const Projects = () => {
               title={title}
               tags={tags}
               projectLink={projectLink}
+              classes='reveal-up'
             />
           ))}
         </div>

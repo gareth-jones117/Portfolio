@@ -2,7 +2,7 @@ const About = () => {
   return (
     <section className="section" id="section">
       <div className="container">
-        <div className="bg-zinc-800/50 p-7 rounded-2xl md:p12">
+        <div className="bg-zinc-800/50 p-7 rounded-2xl md:p12 reveal-up">
           <p className="text-zinc-300 mb-4 md:mb-8 md:text-2xl">
             Hi, I&apos;m Gareth. A Full Stack Developer based in New Zealand.
             I&apos;m passionate about being creative and love bringing awesome
